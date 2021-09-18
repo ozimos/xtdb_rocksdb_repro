@@ -1,0 +1,11 @@
+ {:xtdb {:xtdb.jdbc/connection-pool {:dialect {:xtdb/module xtdb.jdbc.psql/->dialect}
+                                     :db-spec {:jdbcUrl "jdbc:postgresql://localhost/sports_xtdb_dev?user=postgres"}}
+         :xtdb/tx-log {:xtdb/module xtdb.jdbc/->tx-log
+                       :connection-pool :xtdb.jdbc/connection-pool}
+         :xtdb/document-store {:xtdb/module xtdb.jdbc/->document-store
+                               :connection-pool :xtdb.jdbc/connection-pool}
+         :xtdb/index-store {:kv-store {:xtdb/module xtdb.rocksdb/->kv-store
+                                       :db-dir #profile {:test "data/test/rocksdb" :dev "data/dev/rocksdb"}}}}
+  :client {:connect-timeout 3000
+           :redirect-policy :always}
+  :profile #profile {:dev :dev :test :test :prod :prod}}
