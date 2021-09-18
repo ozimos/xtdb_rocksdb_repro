@@ -1,5 +1,5 @@
  {:xtdb {:xtdb.jdbc/connection-pool {:dialect {:xtdb/module xtdb.jdbc.psql/->dialect}
-                                     :db-spec {:jdbcUrl "jdbc:postgresql://localhost/sports_xtdb_dev?user=postgres"}}
+                                     :db-spec {:jdbcUrl "jdbc:postgresql://localhost/sports_xtdb_dev?user=postgres&password=postgres"}}
          :xtdb/tx-log {:xtdb/module xtdb.jdbc/->tx-log
                        :connection-pool :xtdb.jdbc/connection-pool}
          :xtdb/document-store {:xtdb/module xtdb.jdbc/->document-store

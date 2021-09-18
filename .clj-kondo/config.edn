@@ -1,1 +1,1 @@
-{:config-paths ["mount"]}
+{:config-paths ["mount" "com.crypticbutter/snoop"]}
