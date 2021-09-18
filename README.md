@@ -16,9 +16,11 @@ Run the command below in the root repo directory
 
 The SIGSEV happens during testing
 
+Set the watch flago on kaocha to distinguish JVM crash from normal JVM exit at the end of test
+
 Run the test:
 
-    $ bin/kaocha
+    $ bin/kaocha --watch
 
 
 ### Bugs
